@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetworkSniffer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace NetworkSniffer.Views
         public SnifferView()
         {
             InitializeComponent();
+
+            DataContext = new MainViewModel();
         }
     }
 }
