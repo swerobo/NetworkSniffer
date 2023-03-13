@@ -1,0 +1,13 @@
+﻿<Application x:Class="NetworkSniffer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NetworkSniffer"
+             xmlns:views="clr-namespace:NetworkSniffer.Views"
+             xmlns:viewmodels="clr-namespace:NetworkSniffer.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:SnifferViewModel}">
+            <views:SnifferView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
