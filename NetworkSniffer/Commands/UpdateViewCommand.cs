@@ -1,14 +1,18 @@
 ﻿using NetworkSniffer.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace NetworkSniffer.Commands
 {
-    internal class StartCapture : ICommand
+    public class UpdateViewCommand : ICommand
     {
         private MainViewModel viewModel;
 
-        public StartCapture(MainViewModel viewModel)
+        public UpdateViewCommand(MainViewModel viewModel)
         {
             this.viewModel = viewModel;
         }
@@ -17,13 +21,15 @@ namespace NetworkSniffer.Commands
 
         public bool CanExecute(object? parameter)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Execute(object? parameter)
         {
-            Console.WriteLine("Test");
-            throw new NotImplementedException();
+            if(parameter.ToString() == "Help")
+            {
+                viewModel.SelectedViewModel = new HelpViewModel();
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace NetworkSniffer.ViewModels
 {
-    internal class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
