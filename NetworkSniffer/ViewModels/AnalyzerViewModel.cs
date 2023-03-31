@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NetworkSniffer.ViewModels
 {
-    public class AnalyzerViewModel : BaseViewModel
+    public class AnalyzerViewModel : ViewModelBase
     {
         #region Constructors
         /// <summary>

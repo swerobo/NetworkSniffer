@@ -26,9 +26,14 @@ namespace NetworkSniffer.Commands
 
         public void Execute(object? parameter)
         {
-            if(parameter.ToString() == "Help")
+            if (parameter.ToString() == "Home")
             {
-                viewModel.SelectedViewModel = new HelpViewModel();
+                viewModel.SelectedViewModel = new MainViewModel();
+            }
+
+            if (parameter.ToString() == "Sniffer")
+            {
+                viewModel.SelectedViewModel = new SnifferViewModel();
             }
         }
     }

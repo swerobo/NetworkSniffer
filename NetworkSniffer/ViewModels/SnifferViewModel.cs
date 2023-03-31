@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetworkSniffer.ViewModels
 {
-    internal class SnifferViewModel : BaseViewModel
+    internal class SnifferViewModel : ViewModelBase
     {
     }
 }

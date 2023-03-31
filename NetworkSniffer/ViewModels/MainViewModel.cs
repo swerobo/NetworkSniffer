@@ -17,7 +17,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace NetworkSniffer.ViewModels
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : ViewModelBase
     {
         #region Fields
         private SnifferViewModel snifferViewModel = new SnifferViewModel();
@@ -46,14 +46,14 @@ namespace NetworkSniffer.ViewModels
         private List<string> lowerLengthList;
         #endregion
 
-        private BaseViewModel _selectedViewModel = new SnifferViewModel();
-        public BaseViewModel SelectedViewModel
+        private ViewModelBase _selectedViewModel;
+        public ViewModelBase SelectedViewModel
         {
             get { return _selectedViewModel; }
             set
             {
                 _selectedViewModel = value;
-               // OnPropertyChanged(nameof(SelectedViewModel));
+               OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
 

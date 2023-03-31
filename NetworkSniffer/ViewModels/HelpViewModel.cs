@@ -12,7 +12,7 @@ using System.Windows;
 
 namespace NetworkSniffer.ViewModels
 {
-    public class HelpViewModel : BaseViewModel
+    public class HelpViewModel : ViewModelBase
     {
         #region Constructors
         /// <summary>
